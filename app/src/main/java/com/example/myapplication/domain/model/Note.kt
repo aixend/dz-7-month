@@ -5,6 +5,10 @@ class Note (
     val title: String,
     val description: String
 )
+
+
+
+
 {
     companion object{
         const val DEFAULT_ID = 0
