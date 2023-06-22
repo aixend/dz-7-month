@@ -1,4 +1,4 @@
-package com.example.myapplication.di
+package com.example.myapplication.data.di
 
 import android.content.Context
 import androidx.room.Room
@@ -16,14 +16,14 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 @Module
 object NoteModule {
-
-    @Singleton
     @Provides
+    @Singleton
+
     fun provideNoteDatabase(
         @ApplicationContext context: Context
     ): NoteDatabase = Room.databaseBuilder(
         context, NoteDatabase::class.java, "note_db"
-    ).allowMainThreadQueries().build()
+    ).build()
 
 
     @Singleton

@@ -29,6 +29,7 @@ class NoteRepositoryImpl @Inject constructor(
 
     override fun createNote(note: Note) = flow{
         emit(Resource.Loading())
+        kotlinx.coroutines.delay(2000)
         try {
             val data =  noteDao.createNote(note.toEntity())
             emit(Resource.Success(data))

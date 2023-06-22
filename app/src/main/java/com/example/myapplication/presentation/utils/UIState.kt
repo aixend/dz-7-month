@@ -1,4 +1,4 @@
-package com.example.myapplication.presentation
+package com.example.myapplication.presentation.utils
 
 sealed class UIState<T> {
     class Loading<T> : UIState<T>()

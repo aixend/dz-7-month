@@ -1,10 +1,12 @@
 package com.example.myapplication.domain.model
 
+import java.io.Serializable
+
 class Note (
     val id: Int = DEFAULT_ID,
-    val title: String,
-    val description: String
-)
+    var title: String,
+    var description: String
+) : Serializable
 
 
 
